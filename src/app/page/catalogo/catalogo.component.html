@@ -1,0 +1,62 @@
+<form [formGroup]="filterDataForm">
+  <mat-form-field appearance="outline" class="full-width">
+    <mat-label></mat-label>
+
+    <mat-select formControlName="colonna">
+      <mat-option value="genere">Genere</mat-option>
+      <mat-option value="autore">Autore</mat-option>
+      <mat-option value="titolo">Titolo</mat-option>
+    </mat-select>
+  </mat-form-field>
+
+  <mat-form-field appearance="outline" class="full-width">
+    <mat-label> valore </mat-label>
+
+    <input matInput type="text" formControlName="valore" />
+  </mat-form-field>
+
+  <mat-form-field appearance="outline" class="full-width">
+    <mat-label></mat-label>
+
+    <mat-select formControlName="ordine">
+      <mat-option value="asc">ascendente</mat-option>
+
+      <mat-option value="desc">discendente</mat-option>
+    </mat-select>
+  </mat-form-field>
+
+  <button mat-raised-button (click)="FiltertBook()">filtra</button>
+  <button mat-raised-button (click)="sortBook()">sorting</button>
+</form>
+
+<div>
+  <table mat-table [dataSource]="dataSourceTable">
+    <ng-container matColumnDef="titolo">
+      <th mat-header-cell *matHeaderCellDef>Titolo</th>
+
+      <td mat-cell *matCellDef="let libro">{{ libro.titolo }}</td>
+    </ng-container>
+
+    <ng-container matColumnDef="autore">
+      <th mat-header-cell *matHeaderCellDef>Autore</th>
+
+      <td mat-cell *matCellDef="let libro">{{ libro.autore }}</td>
+    </ng-container>
+
+    <ng-container matColumnDef="genere">
+      <th mat-header-cell *matHeaderCellDef>Genere</th>
+
+      <td mat-cell *matCellDef="let libro">{{ libro.genere }}</td>
+    </ng-container>
+
+    <ng-container matColumnDef="numeroDiCopie">
+      <th mat-header-cell *matHeaderCellDef>Numero di Copie</th>
+
+      <td mat-cell *matCellDef="let libro">{{ libro.numeroDiCopie }}</td>
+    </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+
+    <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
+  </table>
+</div>

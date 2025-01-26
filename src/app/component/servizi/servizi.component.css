@@ -1,0 +1,65 @@
+
+
+
+mat-tab-group {
+    background-color: rgb(154, 161, 143); /* Sfondo caldo */
+    border-radius: 8px; /* Angoli arrotondati */
+    padding: 10px; /* Spaziatura interna */
+    position: fixed; /* Fissa la tab sopra il contenuto */
+    z-index: 1000; /* Assicurati che sia sopra altri elementi */
+    overflow-y: auto; /* Permetti lo scroll */
+    
+  }
+  p {
+    color: rgb(25, 1, 25);
+    line-height: 1.5;
+    font-family: 'Roboto', 'Arial', sans-serif;
+}
+
+.rem{
+
+    color: rgb(129, 4, 4);
+    line-height: 1.5;
+    font-family: 'Roboto', 'Arial', sans-serif;
+
+
+}
+
+.custom-button {
+    background-color: #9ad2dc; 
+    color: rgb(15, 1, 1); 
+    font-size: 16px; 
+    font-weight: 600; 
+    padding: 12px 24px; 
+    border-radius: 30px; 
+    
+}
+
+.custom-button:active {
+    background-color: #03dac6; 
+}
+
+
+  
+mat-expansion-panel {
+    margin-bottom: 10px; 
+  }
+  
+
+
+  
+
+
+
+
+  
+
+
+
+  
+  
+  
+  
+  
+  
+ 

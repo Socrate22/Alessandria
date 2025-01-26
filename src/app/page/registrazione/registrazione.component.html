@@ -1,0 +1,91 @@
+<div class="container mt-5">
+    <h2 class="text-center">Registrazione Utente</h2>
+    <form [formGroup]="registrationForm" (ngSubmit)="onSubmit()">
+      
+      <div class="form-group mb-3">
+        <label for="nome">Nome</label>
+        <input
+          type="text"
+          id="nome"
+          class="form-control"
+          formControlName="nome"
+        />
+        <div *ngIf="registrationForm.get('nome')?.invalid && registrationForm.get('nome')?.touched" class="text-danger">
+          <small *ngIf="registrationForm.get('nome')?.errors?.['required']">Il nome è obbligatorio.</small>
+          <small *ngIf="registrationForm.get('nome')?.errors?.['minlength']">Deve contenere almeno 2 caratteri.</small>
+        </div>
+      </div>
+  
+      <div class="form-group mb-3">
+        <label for="cognome">Cognome</label>
+        <input
+          type="text"
+          id="cognome"
+          class="form-control"
+          formControlName="cognome"
+        />
+        <div *ngIf="registrationForm.get('cognome')?.invalid && registrationForm.get('cognome')?.touched" class="text-danger">
+          <small *ngIf="registrationForm.get('cognome')?.errors?.['required']">Il cognome è obbligatorio.</small>
+          <small *ngIf="registrationForm.get('cognome')?.errors?.['minlength']">Deve contenere almeno 2 caratteri.</small>
+        </div>
+      </div>
+  
+      <div class="form-group mb-3">
+        <label for="via">Via</label>
+        <input
+          type="text"
+          id="via"
+          class="form-control"
+          formControlName="via"
+        />
+        <div *ngIf="registrationForm.get('indirizzo.via')?.invalid && registrationForm.get('indirizzo.via')?.touched" class="text-danger">
+          <small>La via è obbligatoria.</small>
+        </div>
+      </div>
+  
+      <div class="form-group mb-3">
+        <label for="cap">CAP</label>
+        <input
+          type="text"
+          id="cap"
+          class="form-control"
+          formControlName="cap"
+        />
+        <div *ngIf="registrationForm.get('indirizzo.cap')?.invalid && registrationForm.get('indirizzo.cap')?.touched" class="text-danger">
+          <small *ngIf="registrationForm.get('indirizzo.cap')?.errors?.['required']">Il CAP è obbligatorio.</small>
+          <small *ngIf="registrationForm.get('indirizzo.cap')?.errors?.['pattern']">Deve essere un CAP valido (5 cifre).</small>
+        </div>
+      </div>
+  
+      <div class="form-group mb-3">
+        <label for="telefono">Telefono</label>
+        <input
+          type="text"
+          id="telefono"
+          class="form-control"
+          formControlName="telefono"
+        />
+        <div *ngIf="registrationForm.get('telefono')?.invalid && registrationForm.get('telefono')?.touched" class="text-danger">
+          <small *ngIf="registrationForm.get('telefono')?.errors?.['required']">Il telefono è obbligatorio.</small>
+          <small *ngIf="registrationForm.get('telefono')?.errors?.['pattern']">Deve essere un numero di telefono valido (10 cifre).</small>
+        </div>
+      </div>
+  
+      <div class="form-group mb-3">
+        <label for="email">Email</label>
+        <input
+          type="email"
+          id="email"
+          class="form-control"
+          formControlName="email"
+        />
+        <div *ngIf="registrationForm.get('email')?.invalid && registrationForm.get('email')?.touched" class="text-danger">
+          <small *ngIf="registrationForm.get('email')?.errors?.['required']">L'email è obbligatoria.</small>
+          <small *ngIf="registrationForm.get('email')?.errors?.['email']">Deve essere un'email valida.</small>
+        </div>
+      </div>
+  
+      <button type="submit" class="btn btn-primary" [disabled]="registrationForm.invalid">Registrati</button>
+    </form>
+  </div>
+  

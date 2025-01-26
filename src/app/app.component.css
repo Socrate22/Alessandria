@@ -1,0 +1,64 @@
+.spacer {
+    flex: 1 1 auto;
+  }
+  
+  mat-toolbar {
+    display: flex;
+    justify-content: space-between;
+    padding: 0; /* Rimuove eventuali padding predefiniti */
+
+  }  
+
+.div{
+
+    height: 100%; /* Riempie tutta l'altezza della toolbar */
+    width: 20%; /* Riempie tutta la larghezza della toolbar */
+    display: flex; /* Attiva il layout flexbox */
+    align-items: center; /* Centra verticalmente il contenuto */
+    justify-content: center; /* (Opzionale) Centra orizzontalmente il contenuto */
+    font-family:'Trebuchet MS', sans-serif;
+    padding: 0 6px; /* Spazio interno ai lati */
+
+ }
+
+ .div1 {
+
+    background-color:rgb(134, 158, 93);
+    height: 100%; /* Riempie tutta l'altezza della toolbar */
+    width: 10%; /* Riempie tutta la larghezza della toolbar */
+    display: flex; /* Attiva il layout flexbox */
+    align-items: center; /* Centra verticalmente il contenuto */
+    justify-content: center; /* (Opzionale) Centra orizzontalmente il contenuto */
+    font-family:'Space Grotesk', sans-serif;
+    padding: 0 6px; /* Spazio interno ai lati */
+    margin-left: 10px;
+    border-radius: 20%;
+
+ }
+
+ .clickable-text {
+    cursor: pointer;
+    padding: 0 8px;
+    color: rgb(9, 0, 0); /* O il colore desiderato */
+    text-decoration: none;
+  }
+
+  .example-button-container button {
+    background-color: #78beda; /* Colore di sfondo */
+    color: rgb(6, 0, 0); /* Colore del testo e icona */
+    border: none; /* Rimuove il bordo */
+    padding: 10px 15px; /* Spaziatura interna */
+    border-radius: 8px; /* Angoli arrotondati */
+    cursor: pointer; /* Mostra il cursore a forma di mano */
+    transition: background-color 0.3s ease; /* Effetto transizione */
+  }
+  
+  .example-button-container button:hover {
+    background-color: #0056b3; /* Cambia colore al passaggio del mouse */
+  }
+  
+  .example-button-container mat-icon {
+    vertical-align: middle; /* Centra l'icona verticalmente */
+    font-size: 20px; /* Modifica la dimensione dell'icona */
+  }
+  

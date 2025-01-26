@@ -1,0 +1,47 @@
+<form [formGroup]="formHome">
+  <div class="search-container">
+    <mat-form-field appearance="outline" class="long-field"> 
+      <mat-label>Cerca nel catalogo</mat-label>
+      <input matInput type="text" formControlName="catalogo">
+    </mat-form-field>
+  
+    <mat-form-field appearance="outline" class="short-field">
+      <mat-label>Campo</mat-label>
+      <mat-select formControlName="campo" placeholder="Seleziona un campo">
+        <mat-option value="genere">Genere</mat-option>
+        <mat-option value="autore">Autore</mat-option>
+        <mat-option value="titolo">Titolo</mat-option>
+      </mat-select>
+    </mat-form-field>
+    <button mat-flat-button class="button" (click)="cercaLibri()">Cerca</button>
+  </div>
+</form>
+<br>
+<h2 style="text-align: center; margin-top:30px; margin-bottom:50px">
+
+    Benvenuto nella bilioteca di Alessandria<br>
+    qui troverai i libri di tutto il mondo conosciuto e sconosciuto
+
+</h2>
+
+<div *ngIf="libriFiltrati.length > 0; else noResults" class="results-container">
+  <mat-card *ngFor="let libro of libriFiltrati" class="book-card">
+    <mat-card-header>
+      <mat-card-title>{{ libro.titolo }}</mat-card-title>
+      <mat-card-subtitle>{{ libro.autore }}</mat-card-subtitle>
+    </mat-card-header>
+    <mat-card-content>
+      <p>Genere: {{ libro.genere }}</p>
+      <p>Numero di copie: {{ libro.numeroDiCopie }}</p>
+      <p>Biblioteca: {{ libro.biblioteca }}</p>
+    </mat-card-content>
+    <mat-card-actions class="actions">
+      <button mat-button>Check-out</button>
+    </mat-card-actions>
+  </mat-card>
+</div>
+
+<ng-template #noResults>
+  <p>Nessun libro trovato.</p>
+</ng-template>
+

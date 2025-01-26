@@ -1,0 +1,59 @@
+<mat-tab-group mat-stretch-tabs="false" mat-align-tabs="start">
+  <mat-tab label="Prestito">
+    <h3>Qui puoi creare un account e procedere con la richiesta di prestito</h3>
+    <p class="rem">
+      Puoi effettuare fino a 4 richieste di prestito on-line cliccando sulla
+      voce Richiesta di prestito<br />
+      Il documento che hai richiesto sarà a te riservato per un periodo di 3
+      giorni <br />
+      entro il quale dovrai ritirarlo in biblioteca. La richiesta di prestito
+      <br />
+      può essere effettuata solo se il documento risulta disponibile a catalogo.
+    </p>
+
+    <br />
+    <mat-accordion [multi]="false">
+      <mat-expansion-panel hideToggle>
+        <mat-expansion-panel-header>
+          <mat-panel-title> Richiesta di prestito</mat-panel-title>
+        </mat-expansion-panel-header>
+        <h5>Durata del prestito:</h5>
+
+        <p>
+          libri: 30 giorni prorogabili, prima della data di scadenza, di altri
+          15 giorni se il libro non è prenotato da un altro utente;<br />
+          novità librarie: 15 giorni non prorogabili;<br />
+          documenti multimediali: 7 giorni non prorogabili;<br />
+          ebook: 14 giorni non prorogabili.
+        </p>
+
+        <div>
+          <button mat-button class="custom-button" (click)="navToCatalogo()">
+            richiesta
+          </button>
+        </div>
+      </mat-expansion-panel>
+      <mat-expansion-panel hideToggle>
+        <mat-expansion-panel-header>
+          <mat-panel-title> crea account</mat-panel-title>
+        </mat-expansion-panel-header>
+        <h5>crea account:</h5>
+
+        <p>
+          qui puoi creare il tuo account personale al termine del quale <br />
+          verrà generato il tuo biblionumber personale per accedere ai servizi
+          di prestito
+        </p>
+
+        <div>
+          <button mat-button class="custom-button" (click)="navToAccount()">
+            Account
+          </button>
+        </div>
+      </mat-expansion-panel>
+    </mat-accordion>
+  </mat-tab>
+  <mat-tab label="wi-fi">
+    <p>Informazioni sul servizio Wi-fi della biblioteca.</p>
+  </mat-tab>
+</mat-tab-group>

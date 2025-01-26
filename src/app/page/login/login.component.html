@@ -1,0 +1,27 @@
+<div class="login-container">
+    <h2 class="text-center mb-4">Login</h2>
+    <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+      <div>
+        <label for="biblioNumber" class="form-label">Biblio Number</label>
+        <input 
+          type="text" 
+          class="form-control" 
+          formControlName="biblioNumber" 
+          placeholder="Inserisci la Biblio Number">
+      </div>
+      <div >
+        <label for="password" class="form-label">Password</label>
+        <input 
+          type="password" 
+          class="form-control" 
+          formControlName="password" 
+          placeholder="Inserisci la password">
+      </div>
+      <button 
+        type="submit" 
+        class="btn btn-primary w-100"
+        [disabled]="!loginForm.valid">
+        Login
+      </button>
+    </form>
+  </div>

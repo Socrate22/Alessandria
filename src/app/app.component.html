@@ -1,0 +1,32 @@
+<mat-toolbar color="primary">
+  <div class="div">
+    <span> Biblioteca di Alessandria </span>
+  </div>
+  <div class="div1">
+    <span>
+      <span class="clickable-text" (click)="toggleServizi()">Servizi</span>
+    </span>
+  </div>
+  <div class="div1">
+    <span>
+      <span class="clickable-text" (click)="navToCatalgo()">Catalogo</span>
+    </span>
+  </div>
+  <span class="spacer"></span>
+
+  <span>
+    <div class="example-button-container">
+      <button
+        (click)="navToHome()">
+        <mat-icon>home</mat-icon>
+      </button>
+    </div>
+  </span>
+  <button mat-button (click)="navToLogin()">Login</button>
+</mat-toolbar>
+
+<div *ngIf="serviziAperto" class="servizi-container">
+  <app-servizi></app-servizi>
+</div>
+
+<router-outlet></router-outlet>

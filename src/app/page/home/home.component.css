@@ -1,0 +1,59 @@
+
+div{
+
+    background-color: rgb(131, 216, 188);
+    padding: 50px 50px;
+    text-align: center; /* Centra il testo degli elementi interni */
+
+}
+
+mat-form-field{
+    margin-left: 30px;
+}
+
+.results-container {
+    display: flex;
+    flex-direction: column; 
+    gap: 16px; /* Spaziatura tra le card */
+  
+}
+  
+.book-card {
+text-align: left; /* Allinea tutto il contenuto a sinistra */
+}
+
+.actions {
+  display: flex;
+  justify-content: flex-end; /* Allinea il contenuto a destra */
+  align-items: center; /* Centra verticalmente il contenuto */
+  position: absolute; /* Posiziona le azioni assolutamente rispetto alla card */
+  bottom: 50px; /* Distanza dal bordo inferiore */
+  right: 8px; /* Distanza dal bordo destro */
+  
+}
+
+.search-container {
+    display: flex;
+    align-items: center; /* Centra verticalmente gli elementi */
+    gap: 5px; /* Distanza tra gli elementi */
+    
+}
+  
+  .long-field {
+    flex: 2; /* Occupa più spazio (più lungo) */
+    margin-left: auto;
+  }
+  
+  .short-field {
+    flex: 1;
+    max-width: 300px; 
+
+  }
+  
+  .button {
+    margin-left: 20px; /* Aggiunge spazio tra i campi e il bottone */
+    height: 40px; /* Stessa altezza degli input */
+    border-radius: 5%;
+  }
+  
+  
