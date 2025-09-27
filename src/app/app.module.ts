@@ -24,7 +24,8 @@ import {MatAccordion, MatExpansionModule} from '@angular/material/expansion';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatIconModule} from '@angular/material/icon';
 import { MatToolbarModule } from '@angular/material/toolbar';
-import { RegistrazioneComponent } from './page/registrazione/registrazione.component'; 
+import { RegistrazioneComponent } from './page/registrazione/registrazione.component';
+import { Ex } from './page/ex/ex'; 
 
 
 
@@ -35,7 +36,8 @@ import { RegistrazioneComponent } from './page/registrazione/registrazione.compo
     LoginComponent,
     CatalogoComponent,
     ServiziComponent,
-    RegistrazioneComponent
+    RegistrazioneComponent,
+    Ex
   ],
   imports: [
     BrowserModule,
